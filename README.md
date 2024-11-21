@@ -70,6 +70,6 @@ dotnet ef database update
 ```
 dotnet run
 ```
-7. Open your browser and navigate to http://localhost:5000 to access the application.
+7. Open your browser and navigate to [http://localhost:7218](https://localhost:7218) to access the application.
 
 
