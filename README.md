@@ -1,7 +1,7 @@
 # Knap
 
 ## Overview
-### Blog Solution is a web application designed using Clean Architecture principles. It serves as a robust platform for creating, managing, and publishing blog posts. The architecture separates concerns and promotes maintainability, testability, and scalability.
+### cryptocurrency Price
 
 ## Features
 * cryptocurrency Price 
