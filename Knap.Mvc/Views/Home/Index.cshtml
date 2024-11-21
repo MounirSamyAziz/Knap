@@ -1,0 +1,52 @@
+﻿@model Dictionary<string,Knap.Domain.Entities.CurrencyRateResponse>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form asp-action="Index">
+        <div class="form-group">
+            <label for="baseCurrency">Base currency:</label>
+            <input name="baseCurrency" type="text" value="BTC" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Get" class="btn btn-primary" />
+        </div>
+    </form>
+    @{
+        foreach (var service in Model)
+        {
+            <table>
+                <tbody>
+                    <tr class="form-group">
+                        <td class="control-label">
+                            service name:
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => service.Key)
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="control-label">
+                            Status
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => service.Value.Success)
+                        </td>
+                    </tr>
+                    @foreach (var item in service.Value.Rates)
+                    {
+                        <tr>
+                            <td>@item.Key</td>
+                            <td>@item.Value</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <hr>
+        }
+
+    }
+
+</div>

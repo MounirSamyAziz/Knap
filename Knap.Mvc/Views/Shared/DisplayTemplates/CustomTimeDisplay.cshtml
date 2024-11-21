@@ -1,0 +1,9 @@
+﻿@model int
+
+@{
+    // Assuming the timestamp is in milliseconds
+    var dateTime = DateTimeOffset.FromUnixTimeMilliseconds(Model).DateTime;
+    var formattedTime = dateTime.ToString("HH:mm");
+}
+
+<span>@formattedTime</span>
